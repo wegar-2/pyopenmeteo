@@ -16,9 +16,3 @@ class DatesInterval(BaseModel):
                 f"start date {start.strftime('%Y-%m-%d')} and end date {end.strftime('%Y-%m-%d')}"
             )
         return values
-
-
-if __name__ == "__main__":
-    di = DatesInterval(start=date(2023, 1, 2), end=date(2023, 1, 1))
-    print(di)
-
