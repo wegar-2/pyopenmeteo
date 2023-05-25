@@ -6,5 +6,4 @@ from pyom.parameters.dates_interval import DatesInterval
 class HistoricalDataQuery:
     gps_position: GpsPosition
     meteo_variable: MeteoVariable
-    DatesInterval: DatesInterval
-
+    dates_interval: DatesInterval

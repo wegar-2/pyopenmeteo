@@ -7,6 +7,7 @@ import logging
 
 from pyom.parameters.gps_position import GpsPosition
 from pyom.parameters.meteo_variable import MeteoVariable
+from pyom.queries.historical_data_query import HistoricalDataQuery
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +18,7 @@ class HistoricalDataFetcher:
 
     @classmethod
     def _get_response(cls, params: dict[str, str]):
-        logger.debug(f"")
+        logger.debug(f"Running query to URL {cls.endpoint_url} with the following parameters: {params}")
         try:
             response = requests.get(url=cls.endpoint_url, params=params)
         except Exception as e:
@@ -42,3 +43,11 @@ class HistoricalDataFetcher:
         if not response.ok:
             logger.warning(f"Response NOT OK inside {self.get_data.__name__}!")
         return self._response_to_dataframe(response=response)
+
+    def run_query(self, query: HistoricalDataQuery):
+        return self.get_data(
+            position=query.gps_position,
+            variable=query.meteo_variable,
+            start=query.dates_interval.start,
+            end=query.dates_interval.end
+        )
