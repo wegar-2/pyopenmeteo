@@ -5,9 +5,9 @@ import pandas as pd
 import requests
 import logging
 
-from pyom.parameters.gps_position import GpsPosition
-from pyom.parameters.meteo_variable import MeteoVariable
-from pyom.queries.historical_data_query import HistoricalDataQuery
+from pyopenmeteo.parameters.gps_position import GpsPosition
+from pyopenmeteo.parameters.meteo_variable import MeteoVariable
+from pyopenmeteo.queries.historical_data_query import HistoricalDataQuery
 
 logger = logging.getLogger(__name__)
 

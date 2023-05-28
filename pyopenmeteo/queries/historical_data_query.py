@@ -1,6 +1,6 @@
-from pyom.parameters.gps_position import GpsPosition
-from pyom.parameters.meteo_variable import MeteoVariable
-from pyom.parameters.dates_interval import DatesInterval
+from pyopenmeteo.parameters.gps_position import GpsPosition
+from pyopenmeteo.parameters.meteo_variable import MeteoVariable
+from pyopenmeteo.parameters.dates_interval import DatesInterval
 
 
 class HistoricalDataQuery:

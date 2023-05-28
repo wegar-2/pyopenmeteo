@@ -26,6 +26,6 @@ class GpsPosition(pdc.BaseModel):
 
     @pdc.validator("name")
     def validate_name(cls, value):
-        if isinstance(value, str):
+        if not isinstance(value, str):
             raise ValueError("Value of the parameter name is not a string! ")
         return value
