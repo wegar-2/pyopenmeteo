@@ -1,6 +1,6 @@
 import pytest
 
-from pyom.parameters.gps_position import GpsPosition
+from pyopenmeteo.parameters.gps_position import GpsPosition
 
 
 def test_correct_input():

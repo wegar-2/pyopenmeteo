@@ -1,6 +1,6 @@
 from datetime import date
 import pytest
-from pyom.parameters.dates_interval import DatesInterval
+from pyopenmeteo.parameters.dates_interval import DatesInterval
 
 
 def test_correct_arguments():

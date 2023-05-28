@@ -4,6 +4,7 @@ import pydantic as pdc
 class GpsPosition(pdc.BaseModel):
     latitude: float
     longitude: float
+    name: str
 
     @pdc.validator("latitude")
     def validate_latitude(cls, value):
@@ -23,4 +24,8 @@ class GpsPosition(pdc.BaseModel):
             )
         return round(value, 2)
 
-
+    @pdc.validator("name")
+    def validate_name(cls, value):
+        if isinstance(value, str):
+            raise ValueError("Value of the parameter name is not a string! ")
+        return value
