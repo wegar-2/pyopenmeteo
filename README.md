@@ -1,4 +1,4 @@
-# PyOM
+# PyOpenMeteo
 
 
 ### What Does This Package Do?
